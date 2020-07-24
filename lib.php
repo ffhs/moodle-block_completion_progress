@@ -280,7 +280,7 @@ function block_completion_progress_filter_visibility($activities, $userid, $cour
             if (has_capability('moodle/course:viewhiddenactivities', $coursecontext, $userid)) {
                 $activity['available'] = true;
             } else {
-                if (isset($coursemodule->available) && !$coursemodule->available && empty($coursemodule->availableinfo)) {
+                if (isset($coursemodule->available) && !$coursemodule->available) {
                     continue;
                 }
                 $activity['available'] = $coursemodule->available;
